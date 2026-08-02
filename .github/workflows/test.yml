@@ -1,0 +1,30 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository source code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js runtime environment
+      uses: actions/setup-node@v4
+      with:
+        node-node-version: 20
+        cache: 'npm'
+
+    - name: Install local development dependencies
+      run: npm ci
+
+    - name: Compile TypeScript into production JavaScript
+      run: npm run build
+
+    - name: Execute Jest automated unit test suite
+      run: npm run test
