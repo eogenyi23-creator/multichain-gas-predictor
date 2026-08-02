@@ -44,7 +44,7 @@ describe('GasPredictorEngine', () => {
     engine = new GasPredictorEngine('redis://127.0.0.1:6379');
   });
 
-  all('calculates moving average correctly for sequential block fees', async () => {
+  test('calculates moving average correctly for sequential block fees', async () => {
     // Block 1: Gas is 20
     const res1 = await engine.updateNetworkGas('stellar', 20);
     expect(res1.currentGasPrice).toBe(20);
