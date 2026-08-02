@@ -1,12 +1,12 @@
 {
   "name": "multichain-gas-predictor",
   "version": "1.0.0",
-  "description": "Low-latency multichain gas price tracker and prediction engine using TypeScript and Redis",
+  "description": "Low-latency multichain gas price tracking and moving-average prediction engine built with TypeScript and Redis for high-frequency Web3 applications.",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "start": "node dist/index.js"
   },
   "dependencies": {
