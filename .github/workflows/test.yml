@@ -17,11 +17,10 @@ jobs:
     - name: Set up Node.js runtime environment
       uses: actions/setup-node@v4
       with:
-        node-version: 20
-        cache: 'npm'
+        node-version: 22
 
     - name: Install local development dependencies
-      run: npm ci
+      run: npm install
 
     - name: Compile TypeScript into production JavaScript
       run: npm run build
