@@ -3,6 +3,9 @@ export default {
   testEnvironment: 'node',
   testMatch: ['**/tests/**/*.test.ts'],
   verbose: true,
+  moduleNameMapper: {
+    '^\\.\\./src/(.*)\\.js$': '../src/$1.ts',
+  },
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',
