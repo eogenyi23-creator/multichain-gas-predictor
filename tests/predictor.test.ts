@@ -1,4 +1,4 @@
-import { GasPredictorEngine } from '../src/index.js';
+import { GasPredictorEngine } from '../dist/index.js';
 import {Redis} from 'ioredis';
 
 // Mock the entire ioredis module so tests don't require a live database connection
